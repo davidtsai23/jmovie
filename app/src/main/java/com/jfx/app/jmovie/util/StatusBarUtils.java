@@ -12,11 +12,7 @@ import android.view.WindowManager;
 public class StatusBarUtils {
 
     public static void setStatusBar(Activity activity, boolean isSetColor, int colorId){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){ //4.4之后可以设置状态栏透明
-            //状态栏透明
-            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        }else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){ //5.0才以上可设置状态栏背景色
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){ //5.0才以上可设置状态栏背景色
             //获取界面顶级视图包括状态标题栏
             View decorView = activity.getWindow().getDecorView();
             /**
@@ -32,6 +28,9 @@ public class StatusBarUtils {
                 //设置状态栏透明
                 activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
             }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){ //4.4之后可以设置状态栏透明
+            //状态栏透明
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){ //6.0以上才可以修改状态栏字体和图标
