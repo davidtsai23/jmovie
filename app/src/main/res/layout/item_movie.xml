@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/duye"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/gray_3c"
+                android:textStyle="bold"
+                android:text="毒液"/>
+
+            <TextView
+                android:id="@+id/tv_movie_info"
+                android:layout_below="@+id/movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp"
+                android:textColor="@color/gray_be"
+                android:text="猫眼评分"/>
+
+            <TextView
+                android:id="@+id/tv_movie_info2"
+                android:layout_toRightOf="@+id/tv_movie_info"
+                android:layout_alignBaseline="@id/tv_movie_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/orange"
+                android:text="9.0"/>
+
+            <TextView
+                android:id="@+id/tv_actor"
+                android:layout_below="@+id/tv_movie_info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textSize="12sp"
+                android:textColor="@color/gray_be"
+                android:text="主演：汤姆·哈迪，米歇尔·威廉姆斯..."/>
+
+            <TextView
+                android:id="@+id/tv_movie_content"
+                android:layout_below="@+id/tv_actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/gray_be"
+                android:text="2018-11-09 下周五上映"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="84px"
+            android:layout_height="84px"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/purchase128"/>
+    </LinearLayout>
+
+</LinearLayout>
