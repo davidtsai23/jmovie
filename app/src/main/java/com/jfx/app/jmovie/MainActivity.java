@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //设置状态栏
-        StatusBarUtils.setStatusBar(this,true,R.color.white);
+        StatusBarUtils.setStatusBar(this,true,R.color.gray_f);
         setContentView(R.layout.activity_main);
+
     }
 }
