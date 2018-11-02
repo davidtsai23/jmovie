@@ -19,6 +19,12 @@ public abstract class CommonRecyclerAdapter<T> extends RecyclerView.Adapter<Comm
     protected List<T> mDatas;
     protected int mLayoutId;
 
+    /**
+     * 构造方法
+     * @param context activity
+     * @param datas   装填的数据
+     * @param layoutId 子项item layout
+     */
     public CommonRecyclerAdapter(Context context, List<T> datas, int layoutId) {
         this.mContext = context;
         this.mDatas = datas;
@@ -47,5 +53,10 @@ public abstract class CommonRecyclerAdapter<T> extends RecyclerView.Adapter<Comm
         return mDatas.size();
     }
 
+    /**
+     * 子类Adapter具体实现从holder拿TextView等装填数据T
+     * @param viewHolder
+     * @param item
+     */
     public abstract void handleView(CommonViewHolder viewHolder,T item);
 }

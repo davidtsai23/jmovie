@@ -27,11 +27,17 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recycler_movie);
         initData();
         mMovieAdapter = new MovieAdapter(this,movieList,R.layout.item_movie);
+        //为RecyclerView设置布局管理器
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        //为RecyclerView设置适配器
         mRecyclerView.setAdapter(mMovieAdapter);
+        //适配器触发数据展示
         mMovieAdapter.notifyDataSetChanged();
     }
 
+    /**
+     * 初始化数据
+     */
     private void initData() {
         movieList = new ArrayList<>();
         for (int i=0;i<10;i++){
